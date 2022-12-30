@@ -1,5 +1,6 @@
 package com.ence.review;
 
+import com.ence.review.aop.TimeTraceAop;
 import com.ence.review.repository.*;
 import com.ence.review.service.MemberService;
 import jakarta.persistence.EntityManager;
@@ -21,6 +22,12 @@ public class SpringConfig {
     public MemberService memberService() {
         return new MemberService(memberRepository);
     }
+
+//    @Bean
+//    public TimeTraceAop TimeTraceAop() {
+//        return new TimeTraceAop();
+//    }
+
 //    @Bean
 //    public MemberRepository memberRepository() {
 //        return new MemoryMemberRepository();
